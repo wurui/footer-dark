@@ -2,9 +2,11 @@
     <xsl:template match="/root" name="wurui.footer-dark">
         <!-- className 'J_OXMod' required  -->
         <div class="J_OXMod oxmod-footer-dark" ox-mod="footer-dark">
-            <h1>
-                This is mod footer-dark;
-            </h1>
+            <xsl:for-each select="data/ui-texts/i">
+            	<p>
+            		<xsl:value-of select="."/>
+            	</p>
+            </xsl:for-each>
         </div>
     </xsl:template>
 </xsl:stylesheet>
